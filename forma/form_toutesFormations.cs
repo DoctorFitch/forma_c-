@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace forma
 {
-    public partial class form_connexion : Form
+    public partial class form_toutesFormations : Form
     {
-        public form_connexion()
+        public form_toutesFormations()
         {
             InitializeComponent();
         }

@@ -8,3 +8,16 @@ C:\Users\François\Desktop\Application\forma\forma\obj\Debug\forma.Properties.Re
 C:\Users\François\Desktop\Application\forma\forma\obj\Debug\forma.csproj.GenerateResource.Cache
 C:\Users\François\Desktop\Application\forma\forma\obj\Debug\forma.exe
 C:\Users\François\Desktop\Application\forma\forma\obj\Debug\forma.pdb
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\forma.exe.config
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.exe
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.pdb
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\forma.exe
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\forma.pdb
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\MySql.Data.dll
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.csprojResolveAssemblyReference.cache
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.form_connexion.resources
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.Properties.Resources.resources
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.csproj.GenerateResource.Cache
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.form_menu.resources
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.form_formationsAVenir.resources
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.form_toutesFormations.resources
