@@ -1,0 +1,6 @@
+C:\Users\François\Desktop\echauffement\echauffement\bin\Debug\echauffement.exe.config
+C:\Users\François\Desktop\echauffement\echauffement\bin\Debug\echauffement.exe
+C:\Users\François\Desktop\echauffement\echauffement\bin\Debug\echauffement.pdb
+C:\Users\François\Desktop\echauffement\echauffement\obj\Debug\echauffement.exe
+C:\Users\François\Desktop\echauffement\echauffement\obj\Debug\echauffement.pdb
+C:\Users\François\Desktop\echauffement\echauffement\obj\Debug\echauffement.csprojResolveAssemblyReference.cache
