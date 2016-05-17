@@ -28,5 +28,6 @@ namespace forma
             form_toutesFormations formation_toutes = new form_toutesFormations();
             formation_toutes.ShowDialog();
         }
+      
     }
 }

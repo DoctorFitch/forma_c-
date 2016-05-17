@@ -30,6 +30,12 @@ namespace ConnectCsharpToMysql
             database = "formadb";
             uid = "fitchadmin";
             password = "menphis31";
+            /*
+            server = "mysql.francois-garcia.ws";
+            database = "formadb";
+            uid = "fitchadmin";
+            password = "menphis31";
+            */
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
 
