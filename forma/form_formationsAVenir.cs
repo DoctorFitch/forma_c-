@@ -32,12 +32,53 @@ namespace forma
             string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
 
             // Ajout des dates de la semaine au label
-            label3.Text += " " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy"); ;
+            label3.Text = "Affichage des formations du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
             // Verif
             MessageBox.Show(dateDebutUS + " " + dateFinUS);
 
             string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+
+            DBConnect dbConnect = new DBConnect();
+
+            dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+        }
+
+        private void button_placesRestantes_Click(object sender, EventArgs e)
+        {
+            DBConnect dbConnect = new DBConnect();
+            string dateDebutUS = dateTimePickerDebut.Value.Date.ToString("yyyy/MM/dd");
+            string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "' AND stages_formations_placeRestantes > 0";
+            label3.Text = "Places disponibles du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
+            dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+        }
+
+        private void button_rechercheAvancee_Click(object sender, EventArgs e)
+        {
+            this.Height = 561;
+        }
+
+        private void button_rechercheDate_Click(object sender, EventArgs e)
+        {
+            this.Height = 435;
+
+            string dateDebutUS = dateTimePickerDebut.Value.Date.ToString("yyyy/MM/dd");
+            string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
+
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+
+            DBConnect dbConnect = new DBConnect();
+
+            dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+        }
+
+        private void button_rechercheIntitule_Click(object sender, EventArgs e)
+        {
+            this.Height = 435;
+
+            string intitule = textBox_intitule.Text;
+            string query = "SELECT * FROM view_stages_formations WHERE formations_intitule = '" + intitule + "'";
 
             DBConnect dbConnect = new DBConnect();
 

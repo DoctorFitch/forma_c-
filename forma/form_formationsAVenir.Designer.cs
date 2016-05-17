@@ -36,17 +36,17 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.dateTimePickerFin = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label_au = new System.Windows.Forms.Label();
             this.dateTimePickerDebut = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.button_rechercheDate = new System.Windows.Forms.Button();
+            this.button_rechercheIntitule = new System.Windows.Forms.Button();
+            this.label_intitule = new System.Windows.Forms.Label();
+            this.textBox_intitule = new System.Windows.Forms.TextBox();
+            this.label_date = new System.Windows.Forms.Label();
+            this.button_placesRestantes = new System.Windows.Forms.Button();
+            this.button_rechercheAvancee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewStagesFormations
@@ -96,14 +96,14 @@
             this.dateTimePickerFin.Size = new System.Drawing.Size(84, 20);
             this.dateTimePickerFin.TabIndex = 8;
             // 
-            // label2
+            // label_au
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 450);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(19, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "au";
+            this.label_au.AutoSize = true;
+            this.label_au.Location = new System.Drawing.Point(164, 450);
+            this.label_au.Name = "label_au";
+            this.label_au.Size = new System.Drawing.Size(19, 13);
+            this.label_au.TabIndex = 7;
+            this.label_au.Text = "au";
             // 
             // dateTimePickerDebut
             // 
@@ -116,11 +116,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 29);
+            this.label3.Location = new System.Drawing.Point(11, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 20);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 9;
-            this.label3.Text = "Formations du";
+            this.label3.Text = "label";
             // 
             // label4
             // 
@@ -132,83 +132,87 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Recherche avancée :";
             // 
-            // button1
+            // button_rechercheDate
             // 
-            this.button1.Location = new System.Drawing.Point(300, 444);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Rechercher par date";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button_rechercheDate.Location = new System.Drawing.Point(300, 444);
+            this.button_rechercheDate.Name = "button_rechercheDate";
+            this.button_rechercheDate.Size = new System.Drawing.Size(126, 23);
+            this.button_rechercheDate.TabIndex = 11;
+            this.button_rechercheDate.Text = "Rechercher par date";
+            this.button_rechercheDate.UseVisualStyleBackColor = true;
+            this.button_rechercheDate.Click += new System.EventHandler(this.button_rechercheDate_Click);
             // 
-            // button2
+            // button_rechercheIntitule
             // 
-            this.button2.Location = new System.Drawing.Point(300, 479);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 23);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Rechercher par intitulé";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button_rechercheIntitule.Location = new System.Drawing.Point(300, 479);
+            this.button_rechercheIntitule.Name = "button_rechercheIntitule";
+            this.button_rechercheIntitule.Size = new System.Drawing.Size(126, 23);
+            this.button_rechercheIntitule.TabIndex = 12;
+            this.button_rechercheIntitule.Text = "Rechercher par intitulé";
+            this.button_rechercheIntitule.UseVisualStyleBackColor = true;
+            this.button_rechercheIntitule.Click += new System.EventHandler(this.button_rechercheIntitule_Click);
             // 
-            // label5
+            // label_intitule
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 484);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Intitulé :";
+            this.label_intitule.AutoSize = true;
+            this.label_intitule.Location = new System.Drawing.Point(12, 484);
+            this.label_intitule.Name = "label_intitule";
+            this.label_intitule.Size = new System.Drawing.Size(44, 13);
+            this.label_intitule.TabIndex = 13;
+            this.label_intitule.Text = "Intitulé :";
             // 
-            // textBox1
+            // textBox_intitule
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 481);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 20);
-            this.textBox1.TabIndex = 14;
+            this.textBox_intitule.Location = new System.Drawing.Point(74, 481);
+            this.textBox_intitule.Name = "textBox_intitule";
+            this.textBox_intitule.Size = new System.Drawing.Size(199, 20);
+            this.textBox_intitule.TabIndex = 14;
             // 
-            // label1
+            // label_date
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 449);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Date : ";
+            this.label_date.AutoSize = true;
+            this.label_date.Location = new System.Drawing.Point(12, 449);
+            this.label_date.Name = "label_date";
+            this.label_date.Size = new System.Drawing.Size(39, 13);
+            this.label_date.TabIndex = 15;
+            this.label_date.Text = "Date : ";
             // 
-            // button3
+            // button_placesRestantes
             // 
-            this.button3.Location = new System.Drawing.Point(445, 363);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(214, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "Afficher seulement avec places restantes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button_placesRestantes.Location = new System.Drawing.Point(398, 363);
+            this.button_placesRestantes.Name = "button_placesRestantes";
+            this.button_placesRestantes.Size = new System.Drawing.Size(261, 23);
+            this.button_placesRestantes.TabIndex = 16;
+            this.button_placesRestantes.Text = "Afficher les formations avec places restantes";
+            this.button_placesRestantes.UseVisualStyleBackColor = true;
+            this.button_placesRestantes.Click += new System.EventHandler(this.button_placesRestantes_Click);
             // 
-            // button4
+            // button_rechercheAvancee
             // 
-            this.button4.Location = new System.Drawing.Point(12, 363);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Recherche avancée";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button_rechercheAvancee.Location = new System.Drawing.Point(12, 363);
+            this.button_rechercheAvancee.Name = "button_rechercheAvancee";
+            this.button_rechercheAvancee.Size = new System.Drawing.Size(127, 23);
+            this.button_rechercheAvancee.TabIndex = 17;
+            this.button_rechercheAvancee.Text = "Recherche avancée";
+            this.button_rechercheAvancee.UseVisualStyleBackColor = true;
+            this.button_rechercheAvancee.Click += new System.EventHandler(this.button_rechercheAvancee_Click);
             // 
             // form_formationsAVenir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 516);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(671, 396);
+            this.Controls.Add(this.button_rechercheAvancee);
+            this.Controls.Add(this.button_placesRestantes);
+            this.Controls.Add(this.label_date);
+            this.Controls.Add(this.textBox_intitule);
+            this.Controls.Add(this.label_intitule);
+            this.Controls.Add(this.button_rechercheIntitule);
+            this.Controls.Add(this.button_rechercheDate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dateTimePickerFin);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label_au);
             this.Controls.Add(this.dateTimePickerDebut);
             this.Controls.Add(this.listViewStagesFormations);
             this.Name = "form_formationsAVenir";
@@ -230,15 +234,15 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePickerDebut;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label_au;
         private System.Windows.Forms.DateTimePicker dateTimePickerFin;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button_rechercheDate;
+        private System.Windows.Forms.Button button_rechercheIntitule;
+        private System.Windows.Forms.Label label_intitule;
+        private System.Windows.Forms.TextBox textBox_intitule;
+        private System.Windows.Forms.Button button_placesRestantes;
+        private System.Windows.Forms.Button button_rechercheAvancee;
+        private System.Windows.Forms.Label label_date;
     }
 }
