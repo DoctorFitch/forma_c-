@@ -146,10 +146,9 @@ namespace ConnectCsharpToMysql
         {
 
             //Create a list to store the result
-            List<string>[] list = new List<string>[3];
+            List<string>[] list = new List<string>[2];
             list[0] = new List<string>();
             list[1] = new List<string>();
-            list[2] = new List<string>();
 
             //Open connection
             if (this.OpenConnection() == true)
@@ -162,9 +161,8 @@ namespace ConnectCsharpToMysql
                 //Read the data and store them in the list
                 while (dataReader.Read())
                 {
-                    list[0].Add(dataReader["utilisateurs_id"] + "");
-                    list[1].Add(dataReader["utilisateurs_nom"] + "");
-                    list[2].Add(dataReader["utilisateurs_prenom"] + "");
+                    list[0].Add(dataReader["formations_id"] + "");
+                    list[1].Add(dataReader["formations_intitule"] + "");
                 }
 
                 //close Data Reader
@@ -185,7 +183,7 @@ namespace ConnectCsharpToMysql
         //Count statement
         public int Count(string query)
         {
-       
+
             int Count = -1;
 
             //Open Connection
@@ -280,6 +278,81 @@ namespace ConnectCsharpToMysql
             catch (IOException ex)
             {
                 MessageBox.Show("Error , unable to Restore!");
+            }
+        }
+
+        
+        public void listViewFormation(string query, ListView p_listView)
+        {
+            // allow reload without superposition
+            p_listView.Items.Clear();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    ListViewItem item = new ListViewItem(dataReader["formations_intitule"].ToString());
+                    item.SubItems.Add(dataReader["formations_dateDebut"].ToString());
+                    item.SubItems.Add(dataReader["formations_dateFin"].ToString());
+                    item.SubItems.Add(dataReader["formations_dateLimite"].ToString());
+
+                    p_listView.Items.Add(item);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+            }
+            else
+            {
+                MessageBox.Show("Une erreur est survenue");
+            }
+        }
+
+        public void listViewStagesFormations(string query, ListView p_listView)
+        {
+            // allow reload without superposition
+            p_listView.Items.Clear();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    ListViewItem item = new ListViewItem(dataReader["formations_intitule"].ToString());
+                    item.SubItems.Add(dataReader["associations_nom"].ToString());
+                    item.SubItems.Add(dataReader["salles_nom"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_prix"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_placeRestantes"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_date"].ToString());
+
+                    p_listView.Items.Add(item);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+            }
+            else
+            {
+                MessageBox.Show("Une erreur est survenue");
             }
         }
     }
