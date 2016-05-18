@@ -1,4 +1,4 @@
-# forma_csharp
+# FORMA
 Application Windows permettant l'interaction avec une base de données externe
 
 ## Interface de connexion
