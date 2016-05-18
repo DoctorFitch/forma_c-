@@ -7,7 +7,7 @@ Cette application a pour titre de faciliter l'affichage et le listage des stages
 Interface de connexion simple permettant la saisie de l'identifiant (e-amil) et mot de passe de l'utilisateur.
 Le mot de passe utilise le protocole de cryptage **SHA1**.
 
-![alt tag](https://i.gyazo.com/237036d09241140568bb9d4a5da53156.png)
+![alt tag](https://i.gyazo.com/e888d845b586db269697bdc5498ba13a.png)
 
 ## Menu
 
@@ -68,3 +68,24 @@ public void listViewStagesFormations(string query, ListView p_listView)
         }
 ```
 
+Ainsi il est plus facile de gérer l'espace de recherche avancée à partir de certains paramètres
+
+![alt tag](https://i.gyazo.com/073ca70ab7ee7bb50167b7ebdf13d3b6.png)
+
+Ainsi pour une nouvelle fourchette de date, il suffit à l'utilisateur de choisir une date à partir du **DateTimePicker** et de cliquer sur le bouton *Rechercher par date*.
+
+Cela aura pour effet d'executer le code suivant : 
+
+``` c#
+DBConnect dbConnect = new DBConnect();
+
+// récupération des dates 
+string dateDebutUS = dateTimePickerDebut.Value.Date.ToString("yyyy/MM/dd");
+string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
+
+// écriture de la requête
+string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+
+// remplissage de la ListView
+dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+```
