@@ -23,48 +23,6 @@ L'utilisateur connecté peut consulter les stages de formations à venir par dé
 Afin de permettre la recherche de stages de formations par date, l'utilisateur dispose d'une fonction de **recherche avancée**.
 Celle-ci fonctionne au travers de différent élément clé tel qu'une fourchette de date ou autre, recupéré afin de composer une requete SQL permettant son affichage filtré à l'aide de la fonction suivante : 
 
-```
+``` c#
 dbConnect.listViewStagesFormations(query, listViewStagesFormations);
-```
-
-Code de la fonction permettant le remplissage d'une ListView par une requête SQL :
-
-```
-public void listViewStagesFormations(string query, ListView p_listView)
-        {
-            // allow reload without superposition
-            p_listView.Items.Clear();
-            //Open connection
-            if (this.OpenConnection() == true)
-            {
-                //Create Command
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                //Create a data reader and Execute the command
-                MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                //Read the data and store them in the list
-                while (dataReader.Read())
-                {
-                    ListViewItem item = new ListViewItem(dataReader["formations_intitule"].ToString());
-                    item.SubItems.Add(dataReader["associations_nom"].ToString());
-                    item.SubItems.Add(dataReader["salles_nom"].ToString());
-                    item.SubItems.Add(dataReader["stages_formations_prix"].ToString());
-                    item.SubItems.Add(dataReader["stages_formations_placeRestantes"].ToString());
-                    item.SubItems.Add(dataReader["stages_formations_date"].ToString());
-
-                    p_listView.Items.Add(item);
-                }
-
-                //close Data Reader
-                dataReader.Close();
-
-                //close Connection
-                this.CloseConnection();
-
-            }
-            else
-            {
-                MessageBox.Show("Une erreur est survenue");
-            }
-        }
 ```
