@@ -26,3 +26,45 @@ Celle-ci fonctionne au travers de différent élément clé tel qu'une fourchett
 ``` c#
 dbConnect.listViewStagesFormations(query, listViewStagesFormations);
 ```
+
+Affichage du code de la fonction permettant le remplissage d'une ListView en fonction d'une requête SQL : 
+``` c#
+public void listViewStagesFormations(string query, ListView p_listView)
+        {
+            // allow reload without superposition
+            p_listView.Items.Clear();
+            //Open connection
+            if (this.OpenConnection() == true)
+            {
+                //Create Command
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                //Create a data reader and Execute the command
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                //Read the data and store them in the list
+                while (dataReader.Read())
+                {
+                    ListViewItem item = new ListViewItem(dataReader["formations_intitule"].ToString());
+                    item.SubItems.Add(dataReader["associations_nom"].ToString());
+                    item.SubItems.Add(dataReader["salles_nom"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_prix"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_placeRestantes"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_date"].ToString());
+
+                    p_listView.Items.Add(item);
+                }
+
+                //close Data Reader
+                dataReader.Close();
+
+                //close Connection
+                this.CloseConnection();
+
+            }
+            else
+            {
+                MessageBox.Show("Une erreur est survenue");
+            }
+        }
+```
+
