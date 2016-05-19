@@ -22,6 +22,11 @@ namespace forma
             AcceptButton = button_connexion;
         }
 
+        /// <summary>
+        /// Permet de verifier si l'utilisateur existe dans la base de données et le connecter
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_connexion_Click(object sender, EventArgs e)
         {
             form_menu menu = new form_menu();
@@ -46,7 +51,11 @@ namespace forma
 
         }
 
-        // Fonction permettant de convertir un string en sha1 
+        /// <summary>
+        /// Fonction permettant la conversion d'un string en sha1
+        /// </summary>
+        /// <param name="texte"></param>
+        /// <returns></returns>
         public string getSHA1(string texte)
         {
             SHA1CryptoServiceProvider sh = new SHA1CryptoServiceProvider();
@@ -71,6 +80,11 @@ namespace forma
             textBox_mdpConnexion.LostFocus += new EventHandler(this.TextLostFocusPass);
         }
 
+        /// <summary>
+        /// Fonction permettant de generer un effet de placeholder sur une textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextGotFocusMail(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -81,6 +95,11 @@ namespace forma
             }
         }
 
+        /// <summary>
+        /// Fonction permettant de generer un effet de placeholder sur une textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextGotFocusPass(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -91,6 +110,11 @@ namespace forma
             }
         }
 
+        /// <summary>
+        /// Fonction permettant de generer un effet de placeholder sur une textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextLostFocusMail(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -101,6 +125,11 @@ namespace forma
             }
         }
 
+        /// <summary>
+        /// Fonction permettant de generer un effet de placeholder sur une textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         public void TextLostFocusPass(object sender, EventArgs e)
         {
             TextBox tb = (TextBox)sender;
@@ -111,6 +140,11 @@ namespace forma
             }
         }
 
+        /// <summary>
+        /// Fonction permettant de generer un effet de placeholder sur une textBox
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_close_Click(object sender, EventArgs e)
         {
             this.Close();

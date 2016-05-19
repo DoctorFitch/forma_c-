@@ -16,6 +16,11 @@ namespace forma
         public form_formationsAVenir()
         {
             InitializeComponent();
+            var pos = this.PointToScreen(label3.Location);
+            pos = pictureBox1.PointToClient(pos);
+            label3.Parent = pictureBox1;
+            label3.Location = pos;
+            label3.BackColor = Color.Transparent;
         }
 
         private void form_formationsAVenir_Load(object sender, EventArgs e)
@@ -42,6 +47,11 @@ namespace forma
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
 
+        /// <summary>
+        /// Permet d'afficher les places restantes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_placesRestantes_Click(object sender, EventArgs e)
         {
             DBConnect dbConnect = new DBConnect();
@@ -67,6 +77,11 @@ namespace forma
             this.Height = 587;
         }
 
+        /// <summary>
+        /// Permet d'effectuer une recherche en fonction de dates
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_rechercheDate_Click(object sender, EventArgs e)
         {
             DBConnect dbConnect = new DBConnect();
@@ -85,6 +100,11 @@ namespace forma
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
 
+        /// <summary>
+        /// Permet de rechercher une formation par intitulé
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_rechercheIntitule_Click(object sender, EventArgs e)
         {
             DBConnect dbConnect = new DBConnect();
@@ -100,6 +120,11 @@ namespace forma
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
 
+        /// <summary>
+        /// Permet de réinitialiser le tableau
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_reinitialiser_Click(object sender, EventArgs e)
         {
             DBConnect dbConnect = new DBConnect();

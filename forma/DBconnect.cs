@@ -11,6 +11,7 @@ namespace ConnectCsharpToMysql
 {
     public class DBConnect
     {
+        // declaration des variables globales
         private MySqlConnection connection;
         private string server;
         private string database;
@@ -23,7 +24,7 @@ namespace ConnectCsharpToMysql
             Initialize();
         }
 
-        //Initialize values
+        //Initialize
         private void Initialize()
         {
             server = "mysql.francois-garcia.ws";
@@ -43,7 +44,10 @@ namespace ConnectCsharpToMysql
         }
 
 
-        //open connection to database
+        /// <summary>
+        /// Permet d'ouvrir la connexion à la base de données
+        /// </summary>
+        /// <returns></returns>
         private bool OpenConnection()
         {
             try
@@ -71,7 +75,10 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Close connection
+        /// <summary>
+        /// Permet de fermer la connexion
+        /// </summary>
+        /// <returns></returns>
         private bool CloseConnection()
         {
             try
@@ -86,7 +93,9 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Insert statement
+        /// <summary>
+        /// Permet de réaliser une insertion dans la table
+        /// </summary>
         public void Insert()
         {
             string query = "INSERT INTO tableinfo (name, age) VALUES('John Smith', '33')";
@@ -105,7 +114,9 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Update statement
+        /// <summary>
+        /// Permet un update dans la base de données
+        /// </summary>
         public void Update()
         {
             string query = "UPDATE tableinfo SET name='Joe', age='22' WHERE name='John Smith'";
@@ -128,7 +139,9 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Delete statement
+        /// <summary>
+        /// Permet la suppression d'une donnée
+        /// </summary>
         public void Delete()
         {
             string query = "DELETE FROM tableinfo WHERE name='John Smith'";
@@ -180,7 +193,11 @@ namespace ConnectCsharpToMysql
             }
         }
 
-        //Count statement
+        /// <summary>
+        /// Permet de compter le nombre d'élément à partir d'une requete de type "Count"
+        /// </summary>
+        /// <param name="query">Requete SQL</param>
+        /// <returns>INT avec la valeur du count de la requete</returns>
         public int Count(string query)
         {
 
@@ -318,6 +335,11 @@ namespace ConnectCsharpToMysql
             }
         }
 
+        /// <summary>
+        /// Fonction permettant le remplissage de la liste view des formations
+        /// </summary>
+        /// <param name="query">Requete SQL</param>
+        /// <param name="p_listView">ListView à remplir</param>
         public void listViewStagesFormations(string query, ListView p_listView)
         {
             // allow reload without superposition
