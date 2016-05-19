@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_toutesFormations));
             this.formadbDataSet = new forma.formadbDataSet();
             this.formationsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.formationsTableAdapter = new forma.formadbDataSetTableAdapters.formationsTableAdapter();
@@ -36,10 +37,10 @@
             this.stages_formationsTableAdapter1 = new forma.formadbDataSetTableAdapters.stages_formationsTableAdapter();
             this.listViewFormations = new System.Windows.Forms.ListView();
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_load = new System.Windows.Forms.Button();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button_load = new System.Windows.Forms.Button();
             this.button_retourMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.formadbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formationsBindingSource)).BeginInit();
@@ -79,6 +80,7 @@
             // 
             // listViewFormations
             // 
+            this.listViewFormations.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listViewFormations.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader2,
             this.columnHeader3,
@@ -96,16 +98,6 @@
             this.columnHeader2.Text = "Intitulé";
             this.columnHeader2.Width = 176;
             // 
-            // button_load
-            // 
-            this.button_load.Location = new System.Drawing.Point(412, 293);
-            this.button_load.Name = "button_load";
-            this.button_load.Size = new System.Drawing.Size(75, 23);
-            this.button_load.TabIndex = 1;
-            this.button_load.Text = "Recharger";
-            this.button_load.UseVisualStyleBackColor = true;
-            this.button_load.Click += new System.EventHandler(this.button_load_Click);
-            // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Date début";
@@ -121,6 +113,16 @@
             this.columnHeader5.Text = "Date limite d\'inscription";
             this.columnHeader5.Width = 128;
             // 
+            // button_load
+            // 
+            this.button_load.Location = new System.Drawing.Point(414, 293);
+            this.button_load.Name = "button_load";
+            this.button_load.Size = new System.Drawing.Size(75, 23);
+            this.button_load.TabIndex = 1;
+            this.button_load.Text = "Recharger";
+            this.button_load.UseVisualStyleBackColor = true;
+            this.button_load.Click += new System.EventHandler(this.button_load_Click);
+            // 
             // button_retourMenu
             // 
             this.button_retourMenu.Location = new System.Drawing.Point(12, 293);
@@ -135,10 +137,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(499, 328);
+            this.ClientSize = new System.Drawing.Size(502, 328);
             this.Controls.Add(this.button_retourMenu);
             this.Controls.Add(this.button_load);
             this.Controls.Add(this.listViewFormations);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(518, 367);
             this.Name = "form_toutesFormations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Toutes les formations";

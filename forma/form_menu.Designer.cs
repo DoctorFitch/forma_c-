@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_menu));
             this.button_afficherFormationAVenir = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_afficherFormationAVenir
             // 
-            this.button_afficherFormationAVenir.Location = new System.Drawing.Point(60, 90);
+            this.button_afficherFormationAVenir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_afficherFormationAVenir.Location = new System.Drawing.Point(60, 98);
             this.button_afficherFormationAVenir.Name = "button_afficherFormationAVenir";
             this.button_afficherFormationAVenir.Size = new System.Drawing.Size(164, 23);
             this.button_afficherFormationAVenir.TabIndex = 0;
@@ -44,7 +46,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(60, 137);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(60, 146);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(164, 23);
             this.button2.TabIndex = 1;
@@ -59,6 +62,11 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button_afficherFormationAVenir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 300);
+            this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "form_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
