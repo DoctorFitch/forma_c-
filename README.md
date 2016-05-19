@@ -7,7 +7,7 @@ Cette application a pour titre de faciliter l'affichage et le listage des stages
 Interface de connexion simple permettant la saisie de l'identifiant (e-amil) et mot de passe de l'utilisateur.
 Le mot de passe utilise le protocole de cryptage **SHA1**.
 
-![alt tag](https://i.gyazo.com/e888d845b586db269697bdc5498ba13a.png)
+![alt tag](https://i.gyazo.com/9a1a95c353b1f812ae2138d7180e8af9.png)
 
 ## Menu
 
