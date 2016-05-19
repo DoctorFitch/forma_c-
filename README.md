@@ -1,7 +1,7 @@
 # FORMA
 Application pour les employés de la maison des ligues permettant la gestion et l'affichage de l'espace de formation.
 Cette application a pour titre de faciliter l'affichage et le listage des stages de formations sur une période de temps (planning).
-Retrouver la documentation ici -> [documentation](http://www.francois-garcia.ws/csharp_doc/)
+Pour plus d'informations sur les classes utilisés vous pouvez retrouver la [documentation](http://www.francois-garcia.ws/csharp_doc/).
 
 ## Interface de connexion
 
