@@ -1,0 +1,160 @@
+\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}{}\section{Référence de la classe forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager}
+\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}\index{forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager@{forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager}}
+
+
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}{Table\+Adapter\+Manager} is used to coordinate Table\+Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$  
+
+
+Graphe d\textquotesingle{}héritage de forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}
+\end{center}
+\end{figure}
+\subsection*{Types publics}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92b}{Update\+Order\+Option} \{ \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba27b77cb15d3da7ded0250d0001bc6755}{Update\+Order\+Option.\+Insert\+Update\+Delete} = 0, 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba894fcc001e51f673d3fb5f3096473dd8}{Update\+Order\+Option.\+Update\+Insert\+Delete} = 1
+ \}\begin{DoxyCompactList}\small\item\em Update Order Option /summary$>$ \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abcc62851436704e3322113c23c4fb2f8}{Update\+All} (\hyperlink{classforma_1_1formadb_data_set}{formadb\+Data\+Set} data\+Set)
+\begin{DoxyCompactList}\small\item\em Update all changes to the dataset. /summary$>$ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a57c735907cc021aa07f4f5aae3a5eb3d}{Sort\+Self\+Reference\+Rows} (global\+::\+System.\+Data.\+Data\+Row\mbox{[}$\,$\mbox{]} rows, global\+::\+System.\+Data.\+Data\+Relation relation, bool child\+First)
+\item 
+virtual bool \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abe9aec4cd7f271107fa36d64c7591d1a}{Match\+Table\+Adapter\+Connection} (global\+::\+System.\+Data.\+I\+Db\+Connection input\+Connection)
+\end{DoxyCompactItemize}
+\subsection*{Propriétés}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92b}{Update\+Order\+Option} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aa2af0b3df5f383871223b4bdb89e4195}{Update\+Order}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1associations_table_adapter}{associations\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a88a7400d97d301acdd1ce32415a55e4c}{associations\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1domaines_table_adapter}{domaines\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_afe686b16df7dcf2e2a8156fea2a53f9a}{domaines\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1formations_table_adapter}{formations\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ad19df0a7012af7205d43df1fdc012817}{formations\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1inscriptions_table_adapter}{inscriptions\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a962860f7f355c7de9d7b5c506ceda3c8}{inscriptions\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1intervenants_table_adapter}{intervenants\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_adfca2a7734098b7d4fc665dd8546bf8a}{intervenants\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1salles_table_adapter}{salles\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_acad49cbe77362df69d94d933c7dec1d5}{salles\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1stages__formations_table_adapter}{stages\+\_\+formations\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ac4d42a62eea28c7dfaab694e2defcbbc}{stages\+\_\+formations\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1utilisateurs_table_adapter}{utilisateurs\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a4fb0b154d0ada87fc4e146a63f12ca91}{utilisateurs\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1utilisateurs__type_table_adapter}{utilisateurs\+\_\+type\+Table\+Adapter} \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a0f0968d68baf84ee98092a386f42ccff}{utilisateurs\+\_\+type\+Table\+Adapter}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+bool \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ade942f646060062ebc3ca9968d90cb7f}{Backup\+Data\+Set\+Before\+Update}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+global\+::\+System.\+Data.\+I\+Db\+Connection \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a67b499362db39068b5a573f2fdf39a8e}{Connection}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a2e2d67dba046307bdee15785baf6cf77}{Table\+Adapter\+Instance\+Count}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\hyperlink{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}{Table\+Adapter\+Manager} is used to coordinate Table\+Adapters in the dataset to enable Hierarchical Update scenarios /summary$>$ 
+
+\subsection{Documentation des énumérations membres}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Update\+Order\+Option@{Update\+Order\+Option}}
+\index{Update\+Order\+Option@{Update\+Order\+Option}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Update\+Order\+Option}{UpdateOrderOption}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Update\+Order\+Option}\hspace{0.3cm}{\ttfamily [strong]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92b}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92b}
+
+
+Update Order Option /summary$>$ 
+
+\begin{Desc}
+\item[Valeurs énumérées]\par
+\begin{description}
+\index{Insert\+Update\+Delete@{Insert\+Update\+Delete}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Insert\+Update\+Delete@{Insert\+Update\+Delete}}\item[{\em 
+Insert\+Update\+Delete\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba27b77cb15d3da7ded0250d0001bc6755}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba27b77cb15d3da7ded0250d0001bc6755}
+}]\index{Update\+Insert\+Delete@{Update\+Insert\+Delete}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Update\+Insert\+Delete@{Update\+Insert\+Delete}}\item[{\em 
+Update\+Insert\+Delete\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba894fcc001e51f673d3fb5f3096473dd8}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aca02cb135cfe46391a8a8e751cfed92ba894fcc001e51f673d3fb5f3096473dd8}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Documentation des fonctions membres}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Match\+Table\+Adapter\+Connection@{Match\+Table\+Adapter\+Connection}}
+\index{Match\+Table\+Adapter\+Connection@{Match\+Table\+Adapter\+Connection}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Match\+Table\+Adapter\+Connection(global\+::\+System.\+Data.\+I\+Db\+Connection input\+Connection)}{MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Match\+Table\+Adapter\+Connection (
+\begin{DoxyParamCaption}
+\item[{global\+::\+System.\+Data.\+I\+Db\+Connection}]{input\+Connection}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abe9aec4cd7f271107fa36d64c7591d1a}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abe9aec4cd7f271107fa36d64c7591d1a}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Sort\+Self\+Reference\+Rows@{Sort\+Self\+Reference\+Rows}}
+\index{Sort\+Self\+Reference\+Rows@{Sort\+Self\+Reference\+Rows}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Sort\+Self\+Reference\+Rows(global\+::\+System.\+Data.\+Data\+Row[] rows, global\+::\+System.\+Data.\+Data\+Relation relation, bool child\+First)}{SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual void forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Sort\+Self\+Reference\+Rows (
+\begin{DoxyParamCaption}
+\item[{global\+::\+System.\+Data.\+Data\+Row\mbox{[}$\,$\mbox{]}}]{rows, }
+\item[{global\+::\+System.\+Data.\+Data\+Relation}]{relation, }
+\item[{bool}]{child\+First}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a57c735907cc021aa07f4f5aae3a5eb3d}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a57c735907cc021aa07f4f5aae3a5eb3d}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Update\+All@{Update\+All}}
+\index{Update\+All@{Update\+All}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Update\+All(formadb\+Data\+Set data\+Set)}{UpdateAll(formadbDataSet dataSet)}}]{\setlength{\rightskip}{0pt plus 5cm}virtual int forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Update\+All (
+\begin{DoxyParamCaption}
+\item[{{\bf formadb\+Data\+Set}}]{data\+Set}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abcc62851436704e3322113c23c4fb2f8}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_abcc62851436704e3322113c23c4fb2f8}
+
+
+Update all changes to the dataset. /summary$>$ 
+
+
+
+\subsection{Documentation des propriétés}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!associations\+Table\+Adapter@{associations\+Table\+Adapter}}
+\index{associations\+Table\+Adapter@{associations\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{associations\+Table\+Adapter}{associationsTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf associations\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+associations\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a88a7400d97d301acdd1ce32415a55e4c}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a88a7400d97d301acdd1ce32415a55e4c}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Backup\+Data\+Set\+Before\+Update@{Backup\+Data\+Set\+Before\+Update}}
+\index{Backup\+Data\+Set\+Before\+Update@{Backup\+Data\+Set\+Before\+Update}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Backup\+Data\+Set\+Before\+Update}{BackupDataSetBeforeUpdate}}]{\setlength{\rightskip}{0pt plus 5cm}bool forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Backup\+Data\+Set\+Before\+Update\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ade942f646060062ebc3ca9968d90cb7f}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ade942f646060062ebc3ca9968d90cb7f}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Connection@{Connection}}
+\index{Connection@{Connection}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Connection}{Connection}}]{\setlength{\rightskip}{0pt plus 5cm}global.\+System.\+Data.\+I\+Db\+Connection forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Connection\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a67b499362db39068b5a573f2fdf39a8e}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a67b499362db39068b5a573f2fdf39a8e}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!domaines\+Table\+Adapter@{domaines\+Table\+Adapter}}
+\index{domaines\+Table\+Adapter@{domaines\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{domaines\+Table\+Adapter}{domainesTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf domaines\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+domaines\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_afe686b16df7dcf2e2a8156fea2a53f9a}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_afe686b16df7dcf2e2a8156fea2a53f9a}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!formations\+Table\+Adapter@{formations\+Table\+Adapter}}
+\index{formations\+Table\+Adapter@{formations\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{formations\+Table\+Adapter}{formationsTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf formations\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+formations\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ad19df0a7012af7205d43df1fdc012817}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ad19df0a7012af7205d43df1fdc012817}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!inscriptions\+Table\+Adapter@{inscriptions\+Table\+Adapter}}
+\index{inscriptions\+Table\+Adapter@{inscriptions\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{inscriptions\+Table\+Adapter}{inscriptionsTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf inscriptions\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+inscriptions\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a962860f7f355c7de9d7b5c506ceda3c8}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a962860f7f355c7de9d7b5c506ceda3c8}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!intervenants\+Table\+Adapter@{intervenants\+Table\+Adapter}}
+\index{intervenants\+Table\+Adapter@{intervenants\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{intervenants\+Table\+Adapter}{intervenantsTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf intervenants\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+intervenants\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_adfca2a7734098b7d4fc665dd8546bf8a}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_adfca2a7734098b7d4fc665dd8546bf8a}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!salles\+Table\+Adapter@{salles\+Table\+Adapter}}
+\index{salles\+Table\+Adapter@{salles\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{salles\+Table\+Adapter}{sallesTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf salles\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+salles\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_acad49cbe77362df69d94d933c7dec1d5}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_acad49cbe77362df69d94d933c7dec1d5}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!stages\+\_\+formations\+Table\+Adapter@{stages\+\_\+formations\+Table\+Adapter}}
+\index{stages\+\_\+formations\+Table\+Adapter@{stages\+\_\+formations\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{stages\+\_\+formations\+Table\+Adapter}{stages_formationsTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf stages\+\_\+formations\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+stages\+\_\+formations\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ac4d42a62eea28c7dfaab694e2defcbbc}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_ac4d42a62eea28c7dfaab694e2defcbbc}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Table\+Adapter\+Instance\+Count@{Table\+Adapter\+Instance\+Count}}
+\index{Table\+Adapter\+Instance\+Count@{Table\+Adapter\+Instance\+Count}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Table\+Adapter\+Instance\+Count}{TableAdapterInstanceCount}}]{\setlength{\rightskip}{0pt plus 5cm}int forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Table\+Adapter\+Instance\+Count\hspace{0.3cm}{\ttfamily [get]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a2e2d67dba046307bdee15785baf6cf77}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a2e2d67dba046307bdee15785baf6cf77}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!Update\+Order@{Update\+Order}}
+\index{Update\+Order@{Update\+Order}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{Update\+Order}{UpdateOrder}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Update\+Order\+Option} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+Update\+Order\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aa2af0b3df5f383871223b4bdb89e4195}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_aa2af0b3df5f383871223b4bdb89e4195}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!utilisateurs\+\_\+type\+Table\+Adapter@{utilisateurs\+\_\+type\+Table\+Adapter}}
+\index{utilisateurs\+\_\+type\+Table\+Adapter@{utilisateurs\+\_\+type\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{utilisateurs\+\_\+type\+Table\+Adapter}{utilisateurs_typeTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utilisateurs\+\_\+type\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+utilisateurs\+\_\+type\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a0f0968d68baf84ee98092a386f42ccff}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a0f0968d68baf84ee98092a386f42ccff}
+\index{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}!utilisateurs\+Table\+Adapter@{utilisateurs\+Table\+Adapter}}
+\index{utilisateurs\+Table\+Adapter@{utilisateurs\+Table\+Adapter}!forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager@{forma\+::formadb\+Data\+Set\+Table\+Adapters\+::\+Table\+Adapter\+Manager}}
+\subsubsection[{\texorpdfstring{utilisateurs\+Table\+Adapter}{utilisateursTableAdapter}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf utilisateurs\+Table\+Adapter} forma.\+formadb\+Data\+Set\+Table\+Adapters.\+Table\+Adapter\+Manager.\+utilisateurs\+Table\+Adapter\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}\hypertarget{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a4fb0b154d0ada87fc4e146a63f12ca91}{}\label{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager_a4fb0b154d0ada87fc4e146a63f12ca91}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+forma/\hyperlink{formadb_data_set_8_designer_8cs}{formadb\+Data\+Set.\+Designer.\+cs}\end{DoxyCompactItemize}

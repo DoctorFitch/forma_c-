@@ -42,8 +42,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button_load = new System.Windows.Forms.Button();
             this.button_retourMenu = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.formadbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.formationsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // formadbDataSet
@@ -115,6 +117,7 @@
             // 
             // button_load
             // 
+            this.button_load.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_load.Location = new System.Drawing.Point(414, 293);
             this.button_load.Name = "button_load";
             this.button_load.Size = new System.Drawing.Size(75, 23);
@@ -125,6 +128,7 @@
             // 
             // button_retourMenu
             // 
+            this.button_retourMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_retourMenu.Location = new System.Drawing.Point(12, 293);
             this.button_retourMenu.Name = "button_retourMenu";
             this.button_retourMenu.Size = new System.Drawing.Size(124, 23);
@@ -132,6 +136,16 @@
             this.button_retourMenu.Text = "Retourner au menu";
             this.button_retourMenu.UseVisualStyleBackColor = true;
             this.button_retourMenu.Click += new System.EventHandler(this.button_retourMenu_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::forma.Properties.Resources.NiagaraFalls;
+            this.pictureBox1.Location = new System.Drawing.Point(-1340, -289);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1850, 640);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // form_toutesFormations
             // 
@@ -141,6 +155,7 @@
             this.Controls.Add(this.button_retourMenu);
             this.Controls.Add(this.button_load);
             this.Controls.Add(this.listViewFormations);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -151,6 +166,7 @@
             this.Shown += new System.EventHandler(this.form_toutesFormations_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.formadbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.formationsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -169,5 +185,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.Button button_retourMenu;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

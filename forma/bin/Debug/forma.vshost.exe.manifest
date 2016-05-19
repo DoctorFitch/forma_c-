@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="forma.exe" size="13352376">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="forma.exe" size="13352888">
       <assemblyIdentity name="forma" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>p3XumXxF5h5y3WOwZOtUkSo+6pHFyJwqydJCqQHnb24=</dsig:DigestValue>
+        <dsig:DigestValue>GxgScvHeK7ajL035ean0E29K6kooJ4ATqcPfGnWvIfg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

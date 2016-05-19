@@ -1,0 +1,241 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage[french]{babel}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Généré par Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Généré par Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{roman}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large F\+O\+R\+MA }\\
+\vspace*{1cm}
+{\large Généré par Doxygen 1.8.11}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{F\+O\+R\+MA}
+\label{md_README}
+\hypertarget{md_README}{}
+\input{md_README}
+\chapter{Index des espaces de nommage}
+\input{namespaces}
+\chapter{Index hiérarchique}
+\input{hierarchy}
+\chapter{Index des structures de données}
+\input{annotated}
+\chapter{Index des fichiers}
+\input{files}
+\chapter{Documentation des espaces de nommage}
+\input{namespace_connect_csharp_to_mysql}
+\input{namespaceforma}
+\input{namespaceforma_1_1formadb_data_set_table_adapters}
+\input{namespaceforma_1_1_properties}
+\chapter{Documentation des structures de données}
+\input{classforma_1_1formadb_data_set_1_1associations_data_table}
+\input{classforma_1_1formadb_data_set_1_1associations_row}
+\input{classforma_1_1formadb_data_set_1_1associations_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1associations_table_adapter}
+\input{class_connect_csharp_to_mysql_1_1_d_b_connect}
+\input{classforma_1_1formadb_data_set_1_1domaines_data_table}
+\input{classforma_1_1formadb_data_set_1_1domaines_row}
+\input{classforma_1_1formadb_data_set_1_1domaines_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1domaines_table_adapter}
+\input{classforma_1_1form__connexion}
+\input{classforma_1_1form__formations_a_venir}
+\input{classforma_1_1form__menu}
+\input{classforma_1_1form__toutes_formations}
+\input{classforma_1_1formadb_data_set}
+\input{classforma_1_1formadb_data_set_1_1formations_data_table}
+\input{classforma_1_1formadb_data_set_1_1formations_row}
+\input{classforma_1_1formadb_data_set_1_1formations_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1formations_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1inscriptions_data_table}
+\input{classforma_1_1formadb_data_set_1_1inscriptions_row}
+\input{classforma_1_1formadb_data_set_1_1inscriptions_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1inscriptions_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1intervenants_data_table}
+\input{classforma_1_1formadb_data_set_1_1intervenants_row}
+\input{classforma_1_1formadb_data_set_1_1intervenants_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1intervenants_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1salles_data_table}
+\input{classforma_1_1formadb_data_set_1_1salles_row}
+\input{classforma_1_1formadb_data_set_1_1salles_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1salles_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1stages__formations_data_table}
+\input{classforma_1_1formadb_data_set_1_1stages__formations_row}
+\input{classforma_1_1formadb_data_set_1_1stages__formations_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1stages__formations_table_adapter}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1_table_adapter_manager}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs__type_data_table}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs__type_row}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs__type_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1utilisateurs__type_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs_data_table}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs_row}
+\input{classforma_1_1formadb_data_set_1_1utilisateurs_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1utilisateurs_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1view__formations__domaines_data_table}
+\input{classforma_1_1formadb_data_set_1_1view__formations__domaines_row}
+\input{classforma_1_1formadb_data_set_1_1view__formations__domaines_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1view__formations__domaines_table_adapter}
+\input{classforma_1_1formadb_data_set_1_1view__utilisateurs__associations_data_table}
+\input{classforma_1_1formadb_data_set_1_1view__utilisateurs__associations_row}
+\input{classforma_1_1formadb_data_set_1_1view__utilisateurs__associations_row_change_event}
+\input{classforma_1_1formadb_data_set_table_adapters_1_1view__utilisateurs__associations_table_adapter}
+\chapter{Documentation des fichiers}
+\input{_d_bconnect_8cs}
+\input{form__connexion_8cs}
+\input{form__connexion_8_designer_8cs}
+\input{form__formations_a_venir_8cs}
+\input{form__formations_a_venir_8_designer_8cs}
+\input{form__menu_8cs}
+\input{form__menu_8_designer_8cs}
+\input{form__toutes_formations_8cs}
+\input{form__toutes_formations_8_designer_8cs}
+\input{formadb_data_set_8_designer_8cs}
+\input{_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs}
+\input{_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs}
+\input{_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs}
+\input{_program_8cs}
+\input{_assembly_info_8cs}
+\input{_resources_8_designer_8cs}
+\input{_settings_8_designer_8cs}
+\input{_r_e_a_d_m_e_8md}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+
+\end{document}

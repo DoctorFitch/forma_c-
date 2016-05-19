@@ -1,0 +1,92 @@
+Application pour les employés de la maison des ligues permettant la gestion et l\textquotesingle{}affichage de l\textquotesingle{}espace de formation. Cette application a pour titre de faciliter l\textquotesingle{}affichage et le listage des stages de formations sur une période de temps (planning).
+
+\subsection*{Interface de connexion}
+
+Interface de connexion simple permettant la saisie de l\textquotesingle{}identifiant (e-\/amil) et mot de passe de l\textquotesingle{}utilisateur. Le mot de passe utilise le protocole de cryptage {\bfseries S\+H\+A1}.
+
+
+
+\subsection*{Menu}
+
+Cette application dispose d\textquotesingle{}un menu après connexion, permettant à l\textquotesingle{}utilisateur de choisir l\textquotesingle{}action attendue. L\textquotesingle{}utilisateur a le choix entre consulter les {\itshape stages de formations à venir} ou bien {\itshape consulter toutes les formations} disponibles.
+
+\subsection*{Formations à venir}
+
+L\textquotesingle{}utilisateur connecté peut consulter les stages de formations à venir par défaut d\textquotesingle{}une date allant du jour J au jour J+7.
+
+
+
+Afin de permettre la recherche de stages de formations par date, l\textquotesingle{}utilisateur dispose d\textquotesingle{}une fonction de {\bfseries recherche avancée}. Celle-\/ci fonctionne au travers de différent élément clé tel qu\textquotesingle{}une fourchette de date ou autre, recupéré afin de composer une requete S\+QL permettant son affichage filtré à l\textquotesingle{}aide de la fonction suivante \+:
+
+
+\begin{DoxyCode}
+1 dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+\end{DoxyCode}
+
+
+Affichage du code de la fonction permettant le remplissage d\textquotesingle{}une List\+View en fonction d\textquotesingle{}une requête S\+QL \+: 
+\begin{DoxyCode}
+1 public void listViewStagesFormations(string query, ListView p\_listView)
+2         \{
+3             // allow reload without superposition
+4             p\_listView.Items.Clear();
+5             //Open connection
+6             if (this.OpenConnection() == true)
+7             \{
+8                 //Create Command
+9                 MySqlCommand cmd = new MySqlCommand(query, connection);
+10                 //Create a data reader and Execute the command
+11                 MySqlDataReader dataReader = cmd.ExecuteReader();
+12 
+13                 //Read the data and store them in the list
+14                 while (dataReader.Read())
+15                 \{
+16                     ListViewItem item = new ListViewItem(dataReader["formations\_intitule"].ToString());
+17                     item.SubItems.Add(dataReader["associations\_nom"].ToString());
+18                     item.SubItems.Add(dataReader["salles\_nom"].ToString());
+19                     item.SubItems.Add(dataReader["stages\_formations\_prix"].ToString());
+20                     item.SubItems.Add(dataReader["stages\_formations\_placeRestantes"].ToString());
+21                     item.SubItems.Add(dataReader["stages\_formations\_date"].ToString());
+22 
+23                     p\_listView.Items.Add(item);
+24                 \}
+25 
+26                 //close Data Reader
+27                 dataReader.Close();
+28 
+29                 //close Connection
+30                 this.CloseConnection();
+31 
+32             \}
+33             else
+34             \{
+35                 MessageBox.Show("Une erreur est survenue");
+36             \}
+37         \}
+\end{DoxyCode}
+
+
+Ainsi il est plus facile de gérer l\textquotesingle{}espace de recherche avancée à partir de certains paramètres
+
+
+
+Ainsi pour une nouvelle fourchette de date, il suffit à l\textquotesingle{}utilisateur de choisir une date à partir du {\bfseries Date\+Time\+Picker} et de cliquer sur le bouton {\itshape Rechercher par date}.
+
+Cela aura pour effet d\textquotesingle{}executer le code suivant \+:
+
+
+\begin{DoxyCode}
+1 DBConnect dbConnect = new DBConnect();
+2 
+3 // récupération des dates 
+4 string dateDebutUS = dateTimePickerDebut.Value.Date.ToString("yyyy/MM/dd");
+5 string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
+6 
+7 // écriture de la requête
+8 string query = "SELECT * FROM view\_stages\_formations WHERE stages\_formations\_date >= '" + dateDebutUS + "'
+       AND stages\_formations\_date <= '" + dateFinUS + "'";
+9 
+10 // remplissage de la ListView
+11 dbConnect.listViewStagesFormations(query, listViewStagesFormations);
+\end{DoxyCode}
+ 

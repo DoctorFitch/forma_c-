@@ -145,6 +145,7 @@
             // 
             // button_rechercheDate
             // 
+            this.button_rechercheDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rechercheDate.Location = new System.Drawing.Point(300, 444);
             this.button_rechercheDate.Name = "button_rechercheDate";
             this.button_rechercheDate.Size = new System.Drawing.Size(126, 23);
@@ -155,6 +156,7 @@
             // 
             // button_rechercheIntitule
             // 
+            this.button_rechercheIntitule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rechercheIntitule.Location = new System.Drawing.Point(300, 479);
             this.button_rechercheIntitule.Name = "button_rechercheIntitule";
             this.button_rechercheIntitule.Size = new System.Drawing.Size(126, 23);
@@ -190,6 +192,7 @@
             // 
             // button_placesRestantes
             // 
+            this.button_placesRestantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_placesRestantes.Location = new System.Drawing.Point(398, 363);
             this.button_placesRestantes.Name = "button_placesRestantes";
             this.button_placesRestantes.Size = new System.Drawing.Size(261, 23);
@@ -200,6 +203,7 @@
             // 
             // button_rechercheAvancee
             // 
+            this.button_rechercheAvancee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_rechercheAvancee.Location = new System.Drawing.Point(93, 363);
             this.button_rechercheAvancee.Name = "button_rechercheAvancee";
             this.button_rechercheAvancee.Size = new System.Drawing.Size(127, 23);
@@ -210,6 +214,7 @@
             // 
             // button_reinitialiser
             // 
+            this.button_reinitialiser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_reinitialiser.Location = new System.Drawing.Point(12, 363);
             this.button_reinitialiser.Name = "button_reinitialiser";
             this.button_reinitialiser.Size = new System.Drawing.Size(75, 23);
@@ -220,6 +225,7 @@
             // 
             // button_cancel
             // 
+            this.button_cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_cancel.Location = new System.Drawing.Point(300, 514);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(126, 23);
@@ -262,6 +268,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(687, 435);
             this.Name = "form_formationsAVenir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formations à venir";

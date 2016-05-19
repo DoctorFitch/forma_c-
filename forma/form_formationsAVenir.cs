@@ -16,11 +16,43 @@ namespace forma
         public form_formationsAVenir()
         {
             InitializeComponent();
+
+            // sauvegarde des positions
             var pos = this.PointToScreen(label3.Location);
             pos = pictureBox1.PointToClient(pos);
+
+            var pos_lab1 = this.PointToScreen(label_intitule.Location);
+            pos_lab1 = pictureBox1.PointToClient(pos_lab1);
+
+            var pos_lab2 = this.PointToScreen(label_date.Location);
+            pos_lab2 = pictureBox1.PointToClient(pos_lab2);
+
+            var pos_lab3 = this.PointToScreen(label_au.Location);
+            pos_lab3 = pictureBox1.PointToClient(pos_lab3);
+
+            var pos_lab4 = this.PointToScreen(label4.Location);
+            pos_lab4 = pictureBox1.PointToClient(pos_lab4);
+
+            // fusion des labels avec le fond
             label3.Parent = pictureBox1;
             label3.Location = pos;
             label3.BackColor = Color.Transparent;
+
+            label_intitule.Parent = pictureBox1;
+            label_intitule.Location = pos_lab1;
+            label_intitule.BackColor = Color.Transparent;
+
+            label_date.Parent = pictureBox1;
+            label_date.Location = pos_lab2;
+            label_date.BackColor = Color.Transparent;
+
+            label_au.Parent = pictureBox1;
+            label_au.Location = pos_lab3;
+            label_au.BackColor = Color.Transparent;
+
+            label4.Parent = pictureBox1;
+            label4.Location = pos_lab4;
+            label4.BackColor = Color.Transparent;
         }
 
         private void form_formationsAVenir_Load(object sender, EventArgs e)
