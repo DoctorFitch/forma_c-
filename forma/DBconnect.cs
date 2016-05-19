@@ -60,11 +60,11 @@ namespace ConnectCsharpToMysql
                 switch (ex.Number)
                 {
                     case 0:
-                        MessageBox.Show("Cannot connect to server.  Contact administrator");
+                        MessageBox.Show("Impossible de se connecter au serveur.", "Erreur connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
 
                     case 1045:
-                        MessageBox.Show("Invalid username/password, please try again");
+                        MessageBox.Show("Vérifier vos identifiants/mot de passe.\nSi le problème persiste, contacter l'administrateur réseau.", "Erreur connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         break;
                 }
                 return false;
@@ -314,7 +314,7 @@ namespace ConnectCsharpToMysql
             }
             else
             {
-                MessageBox.Show("Une erreur est survenue");
+                MessageBox.Show("Impossible de se connecter au serveur, vérifier vos identifiants/mot de passe.\nSi le problème persiste, contacter l'administrateur réseau.", "Erreur connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

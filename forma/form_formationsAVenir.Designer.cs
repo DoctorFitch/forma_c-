@@ -47,6 +47,8 @@
             this.label_date = new System.Windows.Forms.Label();
             this.button_placesRestantes = new System.Windows.Forms.Button();
             this.button_rechercheAvancee = new System.Windows.Forms.Button();
+            this.button_reinitialiser = new System.Windows.Forms.Button();
+            this.button_cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listViewStagesFormations
@@ -58,6 +60,7 @@
             this.columnHeader4,
             this.columnHeader5,
             this.columnHeader6});
+            this.listViewStagesFormations.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.listViewStagesFormations.Location = new System.Drawing.Point(12, 74);
             this.listViewStagesFormations.Name = "listViewStagesFormations";
             this.listViewStagesFormations.Size = new System.Drawing.Size(647, 274);
@@ -68,14 +71,17 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Intitulé";
+            this.columnHeader1.Width = 123;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Association";
+            this.columnHeader2.Width = 88;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "Salle";
+            this.columnHeader3.Width = 200;
             // 
             // columnHeader4
             // 
@@ -84,10 +90,12 @@
             // columnHeader5
             // 
             this.columnHeader5.Text = "Places restantes";
+            this.columnHeader5.Width = 90;
             // 
             // columnHeader6
             // 
             this.columnHeader6.Text = "Date";
+            this.columnHeader6.Width = 80;
             // 
             // dateTimePickerFin
             // 
@@ -189,7 +197,7 @@
             // 
             // button_rechercheAvancee
             // 
-            this.button_rechercheAvancee.Location = new System.Drawing.Point(12, 363);
+            this.button_rechercheAvancee.Location = new System.Drawing.Point(93, 363);
             this.button_rechercheAvancee.Name = "button_rechercheAvancee";
             this.button_rechercheAvancee.Size = new System.Drawing.Size(127, 23);
             this.button_rechercheAvancee.TabIndex = 17;
@@ -197,11 +205,33 @@
             this.button_rechercheAvancee.UseVisualStyleBackColor = true;
             this.button_rechercheAvancee.Click += new System.EventHandler(this.button_rechercheAvancee_Click);
             // 
+            // button_reinitialiser
+            // 
+            this.button_reinitialiser.Location = new System.Drawing.Point(12, 363);
+            this.button_reinitialiser.Name = "button_reinitialiser";
+            this.button_reinitialiser.Size = new System.Drawing.Size(75, 23);
+            this.button_reinitialiser.TabIndex = 18;
+            this.button_reinitialiser.Text = "Réinitialiser";
+            this.button_reinitialiser.UseVisualStyleBackColor = true;
+            this.button_reinitialiser.Click += new System.EventHandler(this.button_reinitialiser_Click);
+            // 
+            // button_cancel
+            // 
+            this.button_cancel.Location = new System.Drawing.Point(300, 514);
+            this.button_cancel.Name = "button_cancel";
+            this.button_cancel.Size = new System.Drawing.Size(126, 23);
+            this.button_cancel.TabIndex = 19;
+            this.button_cancel.Text = "Annuler";
+            this.button_cancel.UseVisualStyleBackColor = true;
+            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
+            // 
             // form_formationsAVenir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(671, 396);
+            this.Controls.Add(this.button_cancel);
+            this.Controls.Add(this.button_reinitialiser);
             this.Controls.Add(this.button_rechercheAvancee);
             this.Controls.Add(this.button_placesRestantes);
             this.Controls.Add(this.label_date);
@@ -244,5 +274,7 @@
         private System.Windows.Forms.Button button_placesRestantes;
         private System.Windows.Forms.Button button_rechercheAvancee;
         private System.Windows.Forms.Label label_date;
+        private System.Windows.Forms.Button button_reinitialiser;
+        private System.Windows.Forms.Button button_cancel;
     }
 }

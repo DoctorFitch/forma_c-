@@ -17,12 +17,15 @@ namespace forma
         public form_connexion()
         {
             InitializeComponent();
+            pictureBox1.Controls.Add(pictureBox2);
+            pictureBox2.BackColor = Color.Transparent;
+            AcceptButton = button_connexion;
         }
 
         private void button_connexion_Click(object sender, EventArgs e)
         {
             form_menu menu = new form_menu();
-            
+
             string idConnexion = textBox_idConnexion.Text;
             string mdpConnexion = getSHA1(textBox_mdpConnexion.Text); // conversion du mot de passe en SHA1
 
@@ -38,9 +41,9 @@ namespace forma
                 this.Hide();
             }
             else
-                MessageBox.Show("Erreur de connexion");
+                MessageBox.Show("Impossible de se connecter au serveur.\nVérifier vos identifiants/mot de passe.\nSi le problème persiste, contacter l'administrateur réseau.", "Erreur connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            
+
         }
 
         // Fonction permettant de convertir un string en sha1 
@@ -50,12 +53,67 @@ namespace forma
             sh.ComputeHash(ASCIIEncoding.ASCII.GetBytes(texte));
             byte[] re = sh.Hash;
             StringBuilder sb = new StringBuilder();
-            foreach(byte b in re)
+            foreach (byte b in re)
             {
                 sb.Append(b.ToString("x2"));
             }
 
             return sb.ToString();
+        }
+
+        private void form_connexion_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = textBox_garbage;
+            textBox_idConnexion.GotFocus += new EventHandler(this.TextGotFocusMail);
+            textBox_idConnexion.LostFocus += new EventHandler(this.TextLostFocusMail);
+
+            textBox_mdpConnexion.GotFocus += new EventHandler(this.TextGotFocusPass);
+            textBox_mdpConnexion.LostFocus += new EventHandler(this.TextLostFocusPass);
+        }
+
+        public void TextGotFocusMail(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "Adresse e-mail")
+            {
+                tb.Text = "";
+                tb.ForeColor = Color.Black;
+            }
+        }
+
+        public void TextGotFocusPass(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "Mot de passe")
+            {
+                tb.Text = "";
+                tb.ForeColor = Color.Black;
+            }
+        }
+
+        public void TextLostFocusMail(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "")
+            {
+                tb.Text = "Adresse e-mail";
+                tb.ForeColor = Color.SlateGray;
+            }
+        }
+
+        public void TextLostFocusPass(object sender, EventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text == "")
+            {
+                tb.Text = "Mot de passe";
+                tb.ForeColor = Color.SlateGray;
+            }
+        }
+
+        private void button_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

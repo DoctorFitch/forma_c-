@@ -28,93 +28,125 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_espaceConnexion = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_connexion));
             this.textBox_idConnexion = new System.Windows.Forms.TextBox();
             this.textBox_mdpConnexion = new System.Windows.Forms.TextBox();
-            this.label_identifiantConnexion = new System.Windows.Forms.Label();
-            this.label_motDePasseConnexion = new System.Windows.Forms.Label();
             this.button_connexion = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox_garbage = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button_close = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label_espaceConnexion
-            // 
-            this.label_espaceConnexion.AutoSize = true;
-            this.label_espaceConnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_espaceConnexion.Location = new System.Drawing.Point(182, 38);
-            this.label_espaceConnexion.Name = "label_espaceConnexion";
-            this.label_espaceConnexion.Size = new System.Drawing.Size(161, 20);
-            this.label_espaceConnexion.TabIndex = 0;
-            this.label_espaceConnexion.Text = "Espace de connexion";
             // 
             // textBox_idConnexion
             // 
-            this.textBox_idConnexion.Location = new System.Drawing.Point(183, 120);
+            this.textBox_idConnexion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_idConnexion.ForeColor = System.Drawing.Color.Gray;
+            this.textBox_idConnexion.Location = new System.Drawing.Point(92, 196);
             this.textBox_idConnexion.Name = "textBox_idConnexion";
             this.textBox_idConnexion.Size = new System.Drawing.Size(157, 20);
             this.textBox_idConnexion.TabIndex = 1;
+            this.textBox_idConnexion.Text = "Adresse e-mail";
             // 
             // textBox_mdpConnexion
             // 
-            this.textBox_mdpConnexion.Location = new System.Drawing.Point(183, 185);
+            this.textBox_mdpConnexion.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox_mdpConnexion.ForeColor = System.Drawing.Color.Gray;
+            this.textBox_mdpConnexion.Location = new System.Drawing.Point(92, 222);
             this.textBox_mdpConnexion.Name = "textBox_mdpConnexion";
+            this.textBox_mdpConnexion.PasswordChar = '*';
             this.textBox_mdpConnexion.Size = new System.Drawing.Size(157, 20);
             this.textBox_mdpConnexion.TabIndex = 2;
-            // 
-            // label_identifiantConnexion
-            // 
-            this.label_identifiantConnexion.AutoSize = true;
-            this.label_identifiantConnexion.Location = new System.Drawing.Point(183, 101);
-            this.label_identifiantConnexion.Name = "label_identifiantConnexion";
-            this.label_identifiantConnexion.Size = new System.Drawing.Size(59, 13);
-            this.label_identifiantConnexion.TabIndex = 3;
-            this.label_identifiantConnexion.Text = "Identifiant :";
-            // 
-            // label_motDePasseConnexion
-            // 
-            this.label_motDePasseConnexion.AutoSize = true;
-            this.label_motDePasseConnexion.Location = new System.Drawing.Point(183, 166);
-            this.label_motDePasseConnexion.Name = "label_motDePasseConnexion";
-            this.label_motDePasseConnexion.Size = new System.Drawing.Size(77, 13);
-            this.label_motDePasseConnexion.TabIndex = 4;
-            this.label_motDePasseConnexion.Text = "Mot de passe :";
+            this.textBox_mdpConnexion.Text = "Mot de passe";
             // 
             // button_connexion
             // 
-            this.button_connexion.Location = new System.Drawing.Point(212, 235);
+            this.button_connexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_connexion.Location = new System.Drawing.Point(92, 275);
             this.button_connexion.Name = "button_connexion";
-            this.button_connexion.Size = new System.Drawing.Size(99, 23);
+            this.button_connexion.Size = new System.Drawing.Size(157, 23);
             this.button_connexion.TabIndex = 5;
             this.button_connexion.Text = "Se connecter";
             this.button_connexion.UseVisualStyleBackColor = true;
             this.button_connexion.Click += new System.EventHandler(this.button_connexion_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::forma.Properties.Resources.NiagaraFalls;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-652, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1001, 475);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // textBox_garbage
+            // 
+            this.textBox_garbage.Location = new System.Drawing.Point(735, 381);
+            this.textBox_garbage.Name = "textBox_garbage";
+            this.textBox_garbage.Size = new System.Drawing.Size(100, 20);
+            this.textBox_garbage.TabIndex = 7;
+            this.textBox_garbage.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(708, 34);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(231, 75);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button_close
+            // 
+            this.button_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button_close.Location = new System.Drawing.Point(316, 12);
+            this.button_close.Name = "button_close";
+            this.button_close.Size = new System.Drawing.Size(21, 22);
+            this.button_close.TabIndex = 9;
+            this.button_close.Text = "X";
+            this.button_close.UseVisualStyleBackColor = true;
+            this.button_close.Click += new System.EventHandler(this.button_close_Click);
+            // 
             // form_connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 337);
+            this.ClientSize = new System.Drawing.Size(349, 444);
+            this.Controls.Add(this.button_close);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.textBox_garbage);
             this.Controls.Add(this.button_connexion);
-            this.Controls.Add(this.label_motDePasseConnexion);
-            this.Controls.Add(this.label_identifiantConnexion);
             this.Controls.Add(this.textBox_mdpConnexion);
             this.Controls.Add(this.textBox_idConnexion);
-            this.Controls.Add(this.label_espaceConnexion);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "form_connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.form_connexion_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_espaceConnexion;
         private System.Windows.Forms.TextBox textBox_idConnexion;
         private System.Windows.Forms.TextBox textBox_mdpConnexion;
-        private System.Windows.Forms.Label label_identifiantConnexion;
-        private System.Windows.Forms.Label label_motDePasseConnexion;
         private System.Windows.Forms.Button button_connexion;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBox_garbage;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button_close;
     }
 }
 

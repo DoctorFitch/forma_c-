@@ -62,6 +62,7 @@
             this.Name = "form_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.form_menu_FormClosed);
             this.ResumeLayout(false);
 
         }

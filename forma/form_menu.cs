@@ -28,6 +28,10 @@ namespace forma
             form_toutesFormations formation_toutes = new form_toutesFormations();
             formation_toutes.ShowDialog();
         }
-      
+
+        private void form_menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit(); // ferme l'application à la fermeture du menu
+        }
     }
 }
