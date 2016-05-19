@@ -18,7 +18,7 @@ L'utilisateur a le choix entre consulter les *stages de formations à venir* ou 
 
 L'utilisateur connecté peut consulter les stages de formations à venir par défaut d'une date allant du jour J au jour J+7.
 
-![alt tag](https://i.gyazo.com/0c76770bf319497052e22cd4e99cacc1.png)
+![alt tag](https://i.gyazo.com/2655c347ef2f0c10ae110add482ba72d.png)
 
 Afin de permettre la recherche de stages de formations par date, l'utilisateur dispose d'une fonction de **recherche avancée**.
 Celle-ci fonctionne au travers de différent élément clé tel qu'une fourchette de date ou autre, recupéré afin de composer une requete SQL permettant son affichage filtré à l'aide de la fonction suivante : 
