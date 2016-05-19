@@ -21,3 +21,7 @@ C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.csproj.GenerateRes
 C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.exe
 C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.pdb
 C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.csprojResolveAssemblyReference.cache
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\forma.exe.manifest
+C:\Users\François\Desktop\forma_csharp\forma\bin\Debug\forma.application
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.exe.manifest
+C:\Users\François\Desktop\forma_csharp\forma\obj\Debug\forma.application

@@ -37,9 +37,6 @@ namespace forma
             // Ajout des dates de la semaine au label
             label3.Text = "Affichage des formations du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
-            // Verif
-            MessageBox.Show(dateDebutUS + " " + dateFinUS);
-
             string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
             
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
@@ -93,6 +90,9 @@ namespace forma
             DBConnect dbConnect = new DBConnect();
 
             this.Height = 435;
+
+            // changement du label
+            label3.Text = "Affichage des formations ayant pour intitulé " + textBox_intitule.Text;
 
             string intitule = textBox_intitule.Text;
             string query = "SELECT * FROM view_stages_formations WHERE formations_intitule = '" + intitule + "'";
