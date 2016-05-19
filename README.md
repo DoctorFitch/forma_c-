@@ -70,7 +70,7 @@ public void listViewStagesFormations(string query, ListView p_listView)
 
 Ainsi il est plus facile de gérer l'espace de recherche avancée à partir de certains paramètres
 
-![alt tag](https://i.gyazo.com/073ca70ab7ee7bb50167b7ebdf13d3b6.png)
+![alt tag](https://i.gyazo.com/ae008bd2009de43e2a26f25590c07828.png)
 
 Ainsi pour une nouvelle fourchette de date, il suffit à l'utilisateur de choisir une date à partir du **DateTimePicker** et de cliquer sur le bouton *Rechercher par date*.
 
