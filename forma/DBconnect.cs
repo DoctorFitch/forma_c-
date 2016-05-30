@@ -315,9 +315,9 @@ namespace ConnectCsharpToMysql
                 while (dataReader.Read())
                 {
                     ListViewItem item = new ListViewItem(dataReader["formations_intitule"].ToString());
-                    item.SubItems.Add(dataReader["formations_dateDebut"].ToString());
-                    item.SubItems.Add(dataReader["formations_dateFin"].ToString());
-                    item.SubItems.Add(dataReader["formations_dateLimite"].ToString());
+                    item.SubItems.Add(dataReader["formations_niveau"].ToString());
+                    item.SubItems.Add(dataReader["intervenants_prenom"].ToString());
+                    item.SubItems.Add(dataReader["intervenants_email"].ToString());
 
                     p_listView.Items.Add(item);
                 }
@@ -360,7 +360,7 @@ namespace ConnectCsharpToMysql
                     item.SubItems.Add(dataReader["salles_nom"].ToString());
                     item.SubItems.Add(dataReader["stages_formations_prix"].ToString());
                     item.SubItems.Add(dataReader["stages_formations_placeRestantes"].ToString());
-                    item.SubItems.Add(dataReader["stages_formations_date"].ToString());
+                    item.SubItems.Add(dataReader["stages_formations_dateDebut"].ToString());
 
                     p_listView.Items.Add(item);
                 }

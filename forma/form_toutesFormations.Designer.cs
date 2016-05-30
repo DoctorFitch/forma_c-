@@ -102,18 +102,18 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Date début";
-            this.columnHeader3.Width = 88;
+            this.columnHeader3.Text = "Niveau";
+            this.columnHeader3.Width = 56;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Date fin";
-            this.columnHeader4.Width = 78;
+            this.columnHeader4.Text = "Prénom intervenant";
+            this.columnHeader4.Width = 107;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "Date limite d\'inscription";
-            this.columnHeader5.Width = 128;
+            this.columnHeader5.Text = "Mail";
+            this.columnHeader5.Width = 135;
             // 
             // button_load
             // 

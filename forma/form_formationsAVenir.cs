@@ -74,7 +74,7 @@ namespace forma
             // Ajout des dates de la semaine au label
             label3.Text = "Affichage des formations du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
-            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_dateDebut >= '" + dateDebutUS + "' AND stages_formations_dateDebut <= '" + dateFinUS + "'";
             
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
@@ -93,7 +93,7 @@ namespace forma
             string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
 
             // requete de select
-            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "' AND stages_formations_placeRestantes > 0";
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_dateDebut >= '" + dateDebutUS + "' AND stages_formations_dateDebut <= '" + dateFinUS + "' AND stages_formations_placeRestantes > 0";
             label3.Text = "Places disponibles du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
@@ -127,7 +127,7 @@ namespace forma
             // changement du label
             label3.Text = "Affichage des formations du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
-            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_dateDebut >= '" + dateDebutUS + "' AND stages_formations_dateDebut <= '" + dateFinUS + "'";
 
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
@@ -168,12 +168,11 @@ namespace forma
             // on converti dans le bon format
             string dateDebutUS = dateTimePickerDebut.Value.Date.ToString("yyyy/MM/dd");
             string dateFinUS = dateTimePickerFin.Value.Date.ToString("yyyy/MM/dd");
-
             // Ajout des dates de la semaine au label
             label3.Text = "Affichage des formations du " + dateTimePickerDebut.Value.Date.ToString("dd/MM/yyyy") + " au " + dateTimePickerFin.Value.Date.ToString("dd/MM/yyyy");
 
             // requete de selection
-            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_date >= '" + dateDebutUS + "' AND stages_formations_date <= '" + dateFinUS + "'";
+            string query = "SELECT * FROM view_stages_formations WHERE stages_formations_dateDebut >= '" + dateDebutUS + "' AND stages_formations_dateDebut <= '" + dateFinUS + "'";
             
             dbConnect.listViewStagesFormations(query, listViewStagesFormations);
         }
